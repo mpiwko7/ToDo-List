@@ -1,0 +1,229 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--deep-dark: rgb(26, 26, 26);
+	--light-dark: rgb(79, 82, 92);
+	--light-blue: rgb(0, 132, 255);
+	--dark-blue: rgb(2, 84, 161);
+	--light: rgb(245, 245, 245);
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "Montserrat", sans-serif;
+	height: 100vh;
+	/* background: #9898c6; */
+	background: linear-gradient(to bottom right, #ffcc99 -2%, #ff6666 106%);
+}
+
+.fas {
+	pointer-events: none;
+}
+
+.panel {
+	width: 600px;
+	height: auto;
+	box-shadow: 5px 5px 10px rgb(56, 56, 56);
+	border-radius: 8px;
+}
+
+.date {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 30vh;
+	padding: 40px 40px;
+	background-color: rgba(104, 104, 104, 0.3);
+	/* background-image: linear-gradient(to right, #9795f0 0%, #fbc8d4 100%); */
+	/* background-color: rgba(50, 46, 46, 0.5); */
+	font-size: 36px;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+
+.current-date {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.welcome-text {
+	font-family: "Dancing Script", cursive;
+	padding: 20px 0;
+	font-size: 32px;
+}
+
+.todo {
+	padding: 20px 40px;
+	background-color: rgba(243, 243, 243, 0.5);
+	border: none;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+
+.header {
+	text-align: center;
+}
+
+.todo-input {
+	width: 80%;
+	padding: 8px;
+	margin: 10px;
+	background: none;
+	border: none;
+	border-bottom: 1px solid black;
+}
+
+.todo-input:focus {
+	outline: none;
+}
+
+.todo-input::placeholder {
+	color: black;
+}
+
+.btn-add {
+	padding: 8px 15px;
+	border: 1px solid black;
+	border-radius: 8px;
+	background: none;
+	cursor: pointer;
+	text-transform: uppercase;
+	transition: color 0.3s, background-color 0.3s;
+}
+
+.btn-add:hover {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.todolist h3 {
+	margin-top: 10px;
+	text-align: center;
+}
+.error-info {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.todolist ul {
+	list-style: none;
+}
+
+.todolist li {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 10px;
+	padding: 0 10px;
+	background: #f9f9f9;
+	border: none;
+	border-radius: 8px;
+}
+
+.tools {
+	display: inline-block;
+	font-size: 0;
+}
+
+.tools button {
+	padding: 15px 10px;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.tools button:hover {
+	background-color: #ddd;
+}
+
+.complete {
+	color: rgb(0, 132, 255);
+}
+
+.edit {
+	font-weight: bold;
+	color: rgb(15, 179, 69);
+}
+
+.delete {
+	color: tomato;
+}
+
+.completed {
+	font-size: 12px;
+	color: rgb(79, 82, 92);
+	text-decoration: line-through;
+	font-style: italic;
+}
+
+.popup {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: fixed;
+	top: 200%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 800px;
+	color: var(--light);
+	background-color: #541b1b;
+	border-radius: 5px;
+	transition: top 0.5s;
+}
+
+.active {
+	top: 50%;
+}
+
+.popup h3 {
+	padding: 20px;
+}
+
+.popup-info {
+	color: var(--light);
+	margin-bottom: 20px;
+}
+
+.popup-body {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 90%;
+	padding: 10px;
+}
+
+.popup-input {
+	width: 100%;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	color: var(--light-dark);
+	background-color: var(--light);
+}
+
+.popup-btn {
+	width: 30%;
+	display: inline-block;
+	padding: 10px 22px;
+	margin: 20px;
+	border: none;
+	border-radius: 5px;
+	color: var(--deep-dark);
+	background-color: var(--light);
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: color 0.3s, background-color 0.3s;
+}
+
+.popup-btn:hover {
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.2);
+}
